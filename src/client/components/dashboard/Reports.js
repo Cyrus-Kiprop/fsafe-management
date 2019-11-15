@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import mockData from './reportdata.json';
+import React, { useState, useEffect } from "react";
+import mockData from "./reportdata.json";
 
 const Reports = () => {
   const [data, getData] = useState([]);
@@ -16,13 +16,15 @@ const Reports = () => {
   console.log(data);
 
   return (
-    <div className='table-responsive'>
-      <table className='table'>
-        <thead style={{ background: '#E2E7FF' }}>
-          <tr>
-            <th>From</th>
-            <th>Message</th>
-            <th>Time</th>
+    <div className="table-responsive">
+      <table>
+        <thead>
+          <tr style={{ backgroundColor: "#E2E7FF" }}>
+            {["from", "message", "time"].map((item, index) => (
+              <th key={index} scope="col">
+                {item}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>

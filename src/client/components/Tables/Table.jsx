@@ -17,6 +17,7 @@ const Table = ({ tableHeader, data, UI }) => {
           {tableHeader.map((item, index) => (
             <th key={index} scope="col">
               {item}
+              <i className="fas fa-sort" style={{ color: "grey" }}></i>
             </th>
           ))}
         </tr>
@@ -38,7 +39,7 @@ const Table = ({ tableHeader, data, UI }) => {
             return (
               <tr key={index}>
                 <td data-label="No.">{index + 1}</td>
-                <td data-label="Sacco">{sacco || name}</td>
+                <td data-label="Sacco"></td>
                 <td data-label="Status">{status}</td>
                 <td data-label="Riders">{riders || ratings}</td>
                 <td data-label="Location">{location}</td>
