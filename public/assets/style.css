@@ -982,32 +982,69 @@ input::-webkit-input-placeholder {
 }
 
 /* ---------------------------MODAL STYLING--------------------- */
+.modal-container {
+  padding: 0;
+  margin: 9px;
+  display: inline-block;
+  height: auto;
+}
 
 .modal-left {
   /* border: 1px solid black; */
   margin: 0;
   height: 300px;
   background: #43425d;
-  color: white;
-  font-size: 1em;
-  font-weight: bolder;
-  border-radius: 5px 0 0 5px;
+  /* color: white; */
+  /* font-size: 1em; */
+  /* font-weight: bolder; */
+  border-radius: 5px;
 }
 
 .modal-left label {
   color: white;
+  font-weight: bolder;
   font-size: 1.3em;
   margin-top: 25px;
 }
 
 .modal-right {
-  height: 300px;
+  /* padding-top: 10px; */
+  height: auto;
   border-radius: 0px 5px 5px 0px;
+  /* padding: 0px; */
+  /* margin: 0; */
 }
 
+.modal-right input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  width: 50%;
+  line-height: 1em;
+  color: rgb(24, 20, 20);
+  font-size: 14px;
+  /* font-weight: bold; */
+  font-family: "Source Sans Pro", sans-serif;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.404);
+}
 .modal-right label {
-  width: 150px;
+  /* border: none; */
+  margin: 0;
+  width: 25%;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
+  font-size: 14px;
+}
+
+/* save and cancel button */
+.modal-btn {
+  border: none;
+  margin: 5px;
+  padding: 0;
+}
+
+.modal-right::after {
+  outline: none;
 }
 
 /* MODAL RESPONSIVNESS */
@@ -1019,5 +1056,6 @@ input::-webkit-input-placeholder {
   }
   .modal-left label {
     margin-top: 9px;
+    width: 100%;
   }
 }
