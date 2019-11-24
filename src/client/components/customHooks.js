@@ -2,8 +2,11 @@
 // eslint-disable-next-line quotes
 import { useState } from "react";
 
+
 export const useSignUpForm = callback => {
   const [inputs, setInputs] = useState({});
+
+  // we need a state that handles our errors
 
   // handles the data upon submit
   const handleSubmit = e => {

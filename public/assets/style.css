@@ -992,11 +992,9 @@ input::-webkit-input-placeholder {
 .modal-left {
   /* border: 1px solid black; */
   margin: 0;
-  height: 300px;
+  /* height: 100%; */
   background: #43425d;
-  /* color: white; */
-  /* font-size: 1em; */
-  /* font-weight: bolder; */
+  /* box-sizing: border-box; */
   border-radius: 5px;
 }
 
@@ -1010,6 +1008,7 @@ input::-webkit-input-placeholder {
 .modal-right {
   /* padding-top: 10px; */
   height: auto;
+
   border-radius: 0px 5px 5px 0px;
   /* padding: 0px; */
   /* margin: 0; */
@@ -1019,18 +1018,23 @@ input::-webkit-input-placeholder {
   border: none;
   outline: none;
   margin-left: 5px;
-  width: 50%;
+  width: 35%;
   line-height: 1em;
   color: rgb(24, 20, 20);
   font-size: 14px;
   /* font-weight: bold; */
   font-family: "Source Sans Pro", sans-serif;
   border-bottom: 0.5px solid rgba(128, 128, 128, 0.404);
+  transition: ease-in-out, width 0.35s ease-in-out;
+}
+.modal-right input[type="text"]:focus {
+  width: 37%;
+  border-bottom: 0.3px solid rgb(168, 243, 248);
 }
 .modal-right label {
   /* border: none; */
   margin: 0;
-  width: 25%;
+  width: 35%;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -1046,11 +1050,121 @@ input::-webkit-input-placeholder {
 .modal-right::after {
   outline: none;
 }
+/* Rider Modals styling */
+.rider_modal_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rider_modal_header button {
+  background: transparent;
+  color: black;
+  border: none;
+  align-content: center;
+  outline: none;
+  padding: 0 5px;
+  width: 30px;
+}
+
+.rider_modal_header button:hover {
+  background-color: white;
+  color: black;
+}
+
+.input-label {
+  font-weight: bolder;
+  font-size: 16px;
+  flex: 1;
+  line-height: 2rem;
+  background: #e0bfb9;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+
+.input_label-container label {
+  font-weight: bolder;
+  line-height: 2em;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.input_label-container input {
+  /* font-weight: bold; */
+  line-height: 2em;
+  font-size: 16px;
+  color: rgb(63, 62, 62);
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* Left part of the modal including the images */
+.image__display {
+  width: 150px;
+  height: 150px;
+  margin-top: 25px;
+  border-radius: 50%;
+  background: #de8150;
+  /* position: absolute; */
+}
+.image__upload {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: -110px;
+}
+.image__upload input {
+  width: 60px;
+  /* border: 1px solid black; */
+  /* height: 0px; */
+  font-size: 0.5em;
+
+  position: relative;
+  top: 25px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal_list_items ul li input[type="text"] {
+  width: 130px;
+  margin: 5px 0px;
+  border: none;
+  line-height: 25px;
+  color: white;
+  outline: none;
+  text-align: center;
+  border-bottom: 0.1px solid gray;
+  background: transparent;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: ease-in-out, width 0.35s ease-in-out;
+}
+
+.modal_list_items ul li input[type="text"]:focus {
+  width: 150px;
+  border-bottom: 0.3px solid rgb(168, 243, 248);
+}
+
+.modal_list_items ul li:first-child input[type="text"] {
+  font-weight: bolder;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.modal_list_items ul li:nth-child(4) input[type="text"] {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 13px;
+}
+.modal_list_items ul li:last-child input[type="text"] {
+  font-weight: 24px;
+  margin-top: 14px;
+  margin-bottom: 13px;
+}
 
 /* MODAL RESPONSIVNESS */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .modal-left {
-    height: 50px;
+    height: auto;
     width: 100%;
     border-radius: 5px;
   }
@@ -1059,3 +1173,4 @@ input::-webkit-input-placeholder {
     width: 100%;
   }
 }
+/* RIDER EDIT MODAL RESPONSIVENESS  */

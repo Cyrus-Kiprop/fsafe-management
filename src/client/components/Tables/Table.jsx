@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { ButtonToggle, Button } from "reactstrap";
-import EditModal from "./EditModal";
+import SaccoEditModal from "./SaccoEditModal";
+import RiderEditModal from "./RiderEditModal";
 
 const Table = ({ tableHeader, data, UI }) => {
   const [newData, setNewData] = useState(data);
+  console.log(UI.modal);
 
   useEffect(() => {
     setNewData([...data]);
@@ -52,7 +54,11 @@ const Table = ({ tableHeader, data, UI }) => {
                   >
                     {operationStatus}
                   </Button>
-                  <EditModal modalTitle={UI.modal} />
+                  {UI.modal === "Sacco" ? (
+                    <SaccoEditModal modaltitle={UI.modal} />
+                  ) : (
+                    <RiderEditModal modaltitle={UI.modal} />
+                  )}
 
                   <Button className=" action_btn" outline color="danger">
                     <i className="fas fa-trash-alt"></i>

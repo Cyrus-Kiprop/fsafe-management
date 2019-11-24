@@ -1,7 +1,7 @@
 import React from "react";
 import JumbotronWrapper from "../components/JumbotronWrapper";
 import DashboardPage from "../components/dashboard/Dashboard";
-import EditModal from "../components/Tables/EditModal";
+// import EditModal from "../components/Tables/EditModal";
 import SaccoDashBoard from "../components/Sacco/index.js";
 import RiderPage from "../components/Riders";
 // import DashboardPage from "../components/dashboard/Dashboard";

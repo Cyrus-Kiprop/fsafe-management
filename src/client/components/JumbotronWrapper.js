@@ -14,7 +14,4 @@ const JumbotronWrapper = (props) => {
 	);
 };
 
-
-
-
 export default JumbotronWrapper;
